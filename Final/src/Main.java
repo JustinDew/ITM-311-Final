@@ -1,10 +1,13 @@
+//Justin Luu
+// Sorry in advanced. It is pretty messy. Nothing ever worked the way I wanted it to.
+
 public class Main {
 	
 //the values for each account
-	private static int[] jonBalance = {1000,1000,0};
-	private static int[] sarBalance = {0,0,0};
-	private static int[] josBalance = {0,0,0};
-	private static int[] eliBalance = {0,0,0};
+	private static int[] jonBalance = {1000,0,0};
+	private static int[] sarBalance = {200,300,150};
+	private static int[] josBalance = {2000,40,50};
+	private static int[] eliBalance = {300,1000,4500};
 	private static int[] KPLBalance = {0,0,0};
 
 	private static String account = "";

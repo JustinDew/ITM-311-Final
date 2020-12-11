@@ -22,12 +22,14 @@ public class PlanAhead extends account{
 		startFrame();
 		setAccountName("Plan Ahead!");
 		
+		//object instantiation
 		deposit = new JButton("Deposit");
 		message = new JLabel(mes, SwingConstants.CENTER);
 		depositMes = new JLabel("Enter deposit amount: ");
 		panel = new JPanel();
 		field = new JTextField(10);
 		
+		//component setup
 		message.setBounds(0,190,500,50);
 		message.setFont(new Font("Seriff",Font.BOLD,15));
 		
@@ -44,13 +46,14 @@ public class PlanAhead extends account{
 		deposit.setFocusable(false);
 		deposit.addActionListener(this);
 		
+		//adding components
 		add(panel);
 		add(deposit);
 		add(message);
 		addStuff(bal);
 	}
 	
-	
+	//action event for each account
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		String text;
@@ -144,7 +147,7 @@ public class PlanAhead extends account{
 			}
 			
 		}
-		
+		//once again another button to send you back to the correct menus
 		if(e.getSource()==getBackBtn()) {
 			setVisible(false);
 			switch(Main.getAccount()) {
@@ -152,16 +155,16 @@ public class PlanAhead extends account{
 				new Jonathan();
 				break;
 			case "Sarah":
-				//new Sarah();
+				new Sarah();
 				break;
 			case "Joshua":
-				//new Joshua();
+				new Joshua();
 				break;
 			case "Elizabeth":
-				//new Elizabth();
+				new Elizabeth();
 				break;
 			case "KPL":
-				//new KPL();
+				new KPL();
 				break;
 			}
 		}
