@@ -8,7 +8,7 @@ public class Main {
 	private static int[] sarBalance = {200,300,150};
 	private static int[] josBalance = {2000,40,50};
 	private static int[] eliBalance = {300,1000,4500};
-	private static int[] KPLBalance = {0,0,0};
+	private static int[] KPLBalance = {2000,3000,5000};
 
 	private static String account = "";
 	private static int temp = 0;

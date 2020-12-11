@@ -31,11 +31,10 @@ public class Transfer extends JFrame implements ActionListener{
 		accountName = new JLabel("Transfer", SwingConstants.CENTER);
 		backBtn = new JButton("Back");
 		transferBtn = new JButton("Transfer");
-		send = new JCheckBox("I would like to send money to a friend");
-		desc = new JLabel("Transfer funds within your account or transfer to a friend by checking the box  below!", SwingConstants.CENTER);
+		desc = new JLabel("Transfer funds within your own accounts", SwingConstants.CENTER);
 		senders = new JComboBox(yourAccounts);
 		receivers = new JComboBox(yourAccounts);
-		message = new JLabel("Hello", SwingConstants.CENTER);
+		message = new JLabel("", SwingConstants.CENTER);
 		field = new JTextField();
 		
 	//setting up components
@@ -65,19 +64,12 @@ public class Transfer extends JFrame implements ActionListener{
 		backBtn.addActionListener(this);
 		backBtn.setBounds(0,311,500,50);
 		
-		send.setBounds(0, 211, 500, 50);
-		send.setFocusable(false);
-		send.addActionListener(this);
-		send.setFont(new Font("Seriff", Font.BOLD, 15));
-		send.setSelected(Main.getTruth());
-		
 	//adding components
 		add(field);
 		add(receivers);
 		add(senders);
 		add(desc);
 		add(message);
-		add(send);
 		add(transferBtn);
 		add(backBtn);
 		add(accountName);
@@ -503,6 +495,7 @@ public class Transfer extends JFrame implements ActionListener{
 				}
 			break;
 			}
+			field.setText("");
 		}
 		//brings you back to the correct menus
 		if(e.getSource()==backBtn) {
